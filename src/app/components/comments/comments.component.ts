@@ -10,7 +10,7 @@ export class CommentsComponent implements OnInit {
     Life before Death. 
     Strength before weakness. 
     Journey before Destination !!
-    ~ Storm Light Archive By Brandon Sanderson
+    ~ The Stormlight Archive By Brandon Sanderson
   `;
   constructor() {}
 
