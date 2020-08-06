@@ -8,6 +8,7 @@ import { routeTransitionAnimations } from './route-transition-animation';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [routeTransitionAnimations],
 })
 export class AppComponent {
   constructor(

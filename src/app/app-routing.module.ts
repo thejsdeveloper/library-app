@@ -13,23 +13,29 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    data: {
+      animationState: 'One',
+    },
   },
   {
     path: '',
     component: MainComponent,
+    data: {
+      animationState: 'Two',
+    },
     children: [
       {
         path: 'catalog',
         component: CatelogComponent,
         data: {
-          animationState: 'Two',
+          animationState: 'Three',
         },
       },
       {
         path: 'comments',
         component: CommentsComponent,
         data: {
-          animationState: 'Three',
+          animationState: 'Four',
         },
       },
     ],
