@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CatelogComponent } from './components/catelog/catelog.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { MainComponent } from './components/main/main.component';
+import { config } from 'rxjs';
 const routes: Routes = [
   {
     path: '',
@@ -47,7 +48,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
