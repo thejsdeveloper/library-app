@@ -21,12 +21,22 @@ const routes: Routes = [
       {
         path: 'catalog',
         component: CatelogComponent,
+        data: {
+          animationState: 'Two',
+        },
       },
       {
         path: 'comments',
         component: CommentsComponent,
+        data: {
+          animationState: 'Three',
+        },
       },
     ],
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
   },
 ];
 

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { RouterOutlet } from '@angular/router';
+import { routeTransitionAnimations } from './route-transition-animation';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +29,14 @@ export class AppComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl(
         '../assets/images/login.svg'
       )
+    );
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return (
+      outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animationState']
     );
   }
 }
