@@ -1,11 +1,12 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
-import { Observable, merge } from 'rxjs';
-import { DataModel } from '../../model/data-model';
-import { map, startWith, switchMap, filter } from 'rxjs/operators';
-import * as moment from 'moment';
-import { MatSort } from '@angular/material/sort';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatInput } from '@angular/material/input';
+import { MatSort } from '@angular/material/sort';
+import * as moment from 'moment';
+import { merge, Observable } from 'rxjs';
+import { map, startWith, switchMap } from 'rxjs/operators';
+
+import { DataModel } from '../../model/data-model';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-catelog',
