@@ -1,6 +1,6 @@
 # LibraryApp
 
-This is a sample project written in Angular 10 with basic Route Animations. You can view live site here.
+This is a sample project written in Angular 10 with basic Route Animations. You can view [live site here](https://thejsdeveloper-library-app.netlify.app).
 
 It include following view:
 
