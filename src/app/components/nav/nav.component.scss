@@ -1,0 +1,13 @@
+.header {
+  background: #3494e6;
+  background: -webkit-linear-gradient(to right, #3494e6, #ec6ead, #3494e6);
+  background: linear-gradient(to right, #ec6ead, #3494e6);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+}

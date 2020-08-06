@@ -1,0 +1,12 @@
+<mat-toolbar class="header">
+  <nav [routerLink]="['']">
+    <button mat-icon-button class="outline-none" aria-label="icon-button with book icon">
+      <mat-icon svgIcon="book"></mat-icon>
+    </button>
+    <span>Book Station</span>
+  </nav>
+  <span class="spacer"></span>
+  <button mat-button [routerLink]="['/catalog']" routerLinkActive="active" class="mr-2 outline-none">Catalog</button>
+  <button mat-button [routerLink]="['/comments']" routerLinkActive="active" class="outline-none">Comment</button>
+
+</mat-toolbar>

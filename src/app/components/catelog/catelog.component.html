@@ -1,0 +1,46 @@
+<section class="container my-3">
+  <div class="row">
+    <div class="col-md-12">
+      <mat-form-field class="w-100">
+        <mat-label>Filter</mat-label>
+        <input matInput placeholder="Enter a title to filter" #input>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table mat-table class="mat-elevation-z8" [dataSource]="bookData | async" matSort matSortActive="publishedOn"
+        matSortDisableClear matSortDirection="desc">
+        <ng-container matColumnDef="image">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element">
+            <img [src]="element.attributes.display_properties.image" alt="book_image" class="table-img">
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef>Title</th>
+          <td mat-cell *matCellDef="let element"> {{element.attributes.content}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef>Type</th>
+          <td mat-cell *matCellDef="let element"> {{element.attributes.display_properties.type}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="publishedOn">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>Release</th>
+          <td mat-cell *matCellDef="let element"> {{getDate(element.attributes.created_at)}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="updatedOn">
+          <th mat-header-cell *matHeaderCellDef>Updated On</th>
+          <td mat-cell *matCellDef="let element"> {{getDate(element.attributes.updated_at)}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</section>

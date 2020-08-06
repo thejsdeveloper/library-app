@@ -1,0 +1,16 @@
+#landing-page {
+  background-image: url("../../../assets/images/library.jpg") !important;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    border-color: #000;
+  }
+}
+
+.enter {
+  margin-bottom: 3px;
+}
