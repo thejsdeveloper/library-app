@@ -1,3 +1,6 @@
-<p>
-  comments works!
-</p>
+<div class="container my-3 h-90 wrapper">
+  <div class="header">
+    <h3>Comments >_</h3>
+  </div>
+  <div [editable]="value" class="editor" (onContentBlur)="onChange($event)"></div>
+</div>
